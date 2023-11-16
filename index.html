@@ -77,7 +77,11 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: url('./images/futuristicBGInitial.jpg') center/cover no-repeat;
+            /*background: url('./images/unrealEngine4.gif') center/cover no-repeat;*/
+            background-image: url(./images/fh5Gif.gif);
+            background-repeat:no-repeat;
+            background-size: cover;
+             
             filter: blur(8px);
             z-index: -1;
         }
@@ -137,10 +141,110 @@
         }
 
         footer {
-            background-color: #379683;
-            color: #EDF5E1;
+            background-color: #5CDB95;
+            color: #fff;
             text-align: center;
-            padding: 20px 0;
+            padding: 1px 0;
+            font-size: 14px;
+        }
+
+        
+        .download-section {
+            position: relative;
+            overflow: hidden;
+            color: #fff;
+            text-align: center;
+            padding: 100px 0;
+            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
+        }
+
+        .download-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            filter: blur(8px); /* Effetto di sfocatura */
+            background-size: cover;
+            background-position: center;
+        }
+
+        .download-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .download-btn {
+            margin-top: 20px;
+            background-color: #5CDB95;
+            color: #05386B;
+            border: none;
+            padding: 12px 24px;
+            font-size: 18px;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+            text-decoration: none;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+
+        .download-btn:hover {
+            background-color: #8EE4AF;
+            color: #05386B;
+        }
+
+        .download-icon {
+            font-size: 24px;
+            margin-right: 10px;
+        }
+
+        .download-description {
+            margin-bottom: 30px;
+            font-size: larger;
+        }
+
+        .contact-section {
+            background-color: #379683;
+            color: #fff;
+            text-align: center;
+            padding: 80px 0;
+        }
+
+        .contact-heading {
+            font-size: 32px;
+            margin-bottom: 30px;
+            opacity: 0;
+            animation: fadeInUp 1s ease-out 0.5s forwards;
+        }
+
+        .contact-info {
+            font-size: 18px;
+        }
+
+        .contact-card {
+            background-color: #05386B;
+            padding: 20px;
+            border-radius: 8px;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 1s ease-out 1s forwards;
+        }
+
+        .contact-card img {
+            max-width: 100%;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
     </style>
@@ -224,18 +328,49 @@
                     <div class="testimonial-card">
                         <img src="./images/dev3StockImg.jpg" alt="Developer 3" class="testimonial-avatar">
                         <p>"Grazie a Quantum Engine, abbiamo potuto realizzare progetti ambiziosi in tempi record. È il nostro alleato nella creazione di esperienze di gioco straordinarie."</p>
-                        <p class="text-muted">- Mark Johnson, C++ Programmer(Indian Scammer)</p>
+                        <p class="text-muted">- Mark Johnson, C++ Programmer</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
+    <div id="download" class="download-section">
+        <!-- Immagine di sfondo sfocata -->
+        <div class="download-background" style="background-image: url('./images/3dEngineImg.webp')"></div>
+        <div class="container download-content">
+            <h2 class="mb-4">Download Quantum Engine</h2>
+            <p class="download-description">Scarica la nostra ultima versione e inizia a sviluppare giochi straordinari!</p>
+            <!-- Pulsante di download con icona -->
+            <a href="#" class="btn download-btn">
+                <span class="download-icon">⬇️</span>Scarica Ora
+            </a>
+        </div>
+    </div>
+
+    <div class="contact-section">
+        <div class="container">
+            <!-- Testo con animazione -->
+            <h2 class="contact-heading">Contattaci</h2>
+            <div class="row justify-content-center">
+                <!-- Card con informazioni -->
+                <div class="col-md-6">
+                    <div class="contact-card">
+                        <img src="./images/contactStockimg.webp" alt="Contact" class="img-fluid">
+                        <p class="contact-info">Per ulteriori informazioni, non esitare a contattarci al seguente indirizzo email: support@quantumengine.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
     <footer>
         <div class="container">
             <p>&copy; 2023 Quantum Game Engine. Tutti i diritti riservati.</p>
         </div>
     </footer>
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 
